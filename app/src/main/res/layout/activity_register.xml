@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginEnd="20dp"
+    android:layout_marginStart="20dp"
+    tools:context=".RegisterActivity">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_title"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/register_tip"
+        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+
+
+    <ImageView
+        android:id="@+id/ivUserTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_person_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/etUserName"
+        app:layout_constraintTop_toTopOf="@id/etUserName" />
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/user_name"
+        android:inputType="text"
+        android:paddingLeft="26dp"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@id/tvTip" />
+
+    <ImageView
+        android:id="@+id/ivPasswdTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_lock_outline_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/etPasswd"
+        app:layout_constraintTop_toTopOf="@id/etPasswd" />
+    <EditText
+        android:id="@+id/etPasswd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:paddingLeft="26dp"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@id/etUserName" />
+
+    <ImageView
+        android:id="@+id/ivAgeTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_age_5_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/etAge"
+        app:layout_constraintTop_toTopOf="@id/etAge" />
+    <EditText
+        android:id="@+id/etAge"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/age"
+        android:inputType="numberSigned"
+        android:paddingLeft="26dp"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@id/etPasswd" />
+
+    <ImageView
+        android:id="@+id/ivRemarkTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_remark_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/etRemark"
+        app:layout_constraintTop_toTopOf="@id/etRemark" />
+    <EditText
+        android:id="@+id/etRemark"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/remark"
+        android:inputType="textPassword"
+        android:paddingLeft="26dp"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@id/etAge" />
+
+
+    <ImageView
+        android:id="@+id/ivValidate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_accessibility_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/etValidate"
+        app:layout_constraintTop_toTopOf="@id/etValidate"
+        android:contentDescription="validate icon tip" />
+    <EditText
+        android:id="@+id/etValidate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="26dp"
+        android:hint="@string/validate_code"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@id/etRemark" />
+
+    <quanye.org.chatapp.customview.PasswordTextView
+        android:id="@+id/pwtvValidate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintTop_toBottomOf="@id/etValidate"/>
+
+    <Button
+        android:id="@+id/btnRegister"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:layout_marginStart="60dp"
+        android:text="@string/register"
+        android:textSize="18sp"
+        android:onClick="onRegister"
+        android:background="@drawable/bg_btn_selector"
+        app:layout_constraintTop_toBottomOf="@id/pwtvValidate" />
+
+</android.support.constraint.ConstraintLayout>

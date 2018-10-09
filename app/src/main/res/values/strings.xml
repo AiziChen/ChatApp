@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">ChatApp</string>
+    <string name="please_enter_content">请输入内容</string>
+    <string name="send">发送</string>
+    <string name="content_dont_empty">输入的内容不能为空</string>
+    <string name="sending">发送中..</string>
+    <string name="send_failure">发送失败</string>
+    <string name="register">注册</string>
+    <string name="group_talk">群聊</string>
+    <string name="clean">清空</string>
+    <string name="logout">登出</string>
+    <string name="user_name">用户名</string>
+    <string name="password">密码</string>
+    <string name="login">登录</string>
+    <string name="user_login">用户登录</string>
+    <string name="register_tip">密码由8-16数字、字母或符号组成，至少包含2种及以上的字符</string>
+    <string name="register_title">设置昵称和密码</string>
+    <string name="age">年龄（可空）</string>
+    <string name="remark">自我简介（可空）</string>
+    <string name="validate_code">验证码</string>
+</resources>

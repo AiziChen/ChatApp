@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginStart="20dp"
+    android:layout_marginEnd="20dp"
+    tools:context=".LoginActivity">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/civIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:src="@mipmap/ic_launcher"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvUserLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:text="@string/app_name"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/civIcon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    <ImageView
+        android:id="@+id/ivUserTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_person_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/etUserName"
+        app:layout_constraintTop_toTopOf="@id/etUserName" />
+    <EditText
+        android:id="@+id/etUserName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="26dp"
+        android:hint="@string/user_name"
+        android:inputType="text"
+        android:singleLine="true"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvUserLogin" />
+
+    <ImageView
+        android:id="@+id/ivPasswdTip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_lock_outline_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/etPasswd"
+        app:layout_constraintTop_toTopOf="@id/etPasswd"
+        android:contentDescription="password icon tip" />
+    <EditText
+        android:id="@+id/etPasswd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="26dp"
+        android:hint="@string/password"
+        android:singleLine="true"
+        android:inputType="textPassword"
+        app:layout_constraintTop_toBottomOf="@id/etUserName" />
+
+    <ImageView
+        android:id="@+id/ivValidate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/ic_accessibility_black_24dp"
+        app:layout_constraintBottom_toBottomOf="@id/etValidate"
+        app:layout_constraintTop_toTopOf="@id/etValidate"
+        android:contentDescription="validate icon tip" />
+    <EditText
+        android:id="@+id/etValidate"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="26dp"
+        android:hint="@string/validate_code"
+        android:singleLine="true"
+        app:layout_constraintTop_toBottomOf="@id/etPasswd" />
+
+    <quanye.org.chatapp.customview.PasswordTextView
+        android:id="@+id/pwtvValidate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="hello"
+        android:paddingTop="6dp"
+        android:paddingBottom="6dp"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:textColor="@color/colorAccent"
+        app:layout_constraintTop_toBottomOf="@id/etValidate"/>
+
+    <CheckBox
+        android:id="@+id/cbRemember"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="记住密码"
+        app:layout_constraintTop_toBottomOf="@id/pwtvValidate" />
+
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="60dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginRight="60dp"
+        android:onClick="onSubmit"
+        android:text="@string/login"
+        android:textSize="18sp"
+        android:background="@drawable/bg_btn_selector"
+        app:layout_constraintTop_toBottomOf="@+id/cbRemember" />
+
+</android.support.constraint.ConstraintLayout>
